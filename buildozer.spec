@@ -1,16 +1,17 @@
 [app]
 
 # (str) Title of your application
-title = My Application
+title = CGILLDEC
 
 # (str) Package name
-package.name = myapp
+package.name = CGILLDEC
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.test
 
 # (str) Source code where the main.py live
-source.dir = D:\potent\School\Projects\pprojects\pythonProject\datecalc3
+source.dir = cgillDEC/main.py
+
 
 # (list) Source files to include (let empty to include all the files)
 source.include_exts = py,png,jpg,kv,atlas
