@@ -1,0 +1,44 @@
+#:import utils kivy.utils
+
+<MyGridLayout>
+
+    #custom_expiration:custom_expiration
+    canvas.before:
+        Color:
+            rgba: (1,1,1,1)
+        Rectangle:
+            pos : self.pos
+            size: self.size
+
+    GridLayout:
+        cols: 1
+        size: root.width, root.height
+        spacing: 20
+        padding: 50
+
+        AsyncImage:
+            source: "https://mma.prnewswire.com/media/227604/cargill_logo.jpg"
+
+        Label:
+            text:"todays date:\n " + str(root.today) + "  julian date: " + str(root.datestdtojd(str(root.today))) + "\n\n70 days from now it will be:\n " + str(root.expiration(70)) + "  julian date: " + str(root.datestdtojd(str(root.expiration(70)))) + "\n60 days from now it will be:\n " + str(root.expiration(60)) + "  julian date: " + str(root.datestdtojd(str(root.expiration(60)))) + "\n55 days from now it will be:\n " + str(root.expiration(55)) + "  julian date: " + str(root.datestdtojd(str(root.expiration(55))))
+            color: (0,0,0,1)
+            bold: True
+
+
+
+        Label:
+            text: ""
+            #size_hint:(None,None)
+            id: name_label
+            color: (0,0,0,1)
+            #width: 300
+            #height: 35
+
+        TextInput:
+            id: name_input
+            multiline: False
+            on_text: root.callback(name_label)
+            #size_hint:(None,None)
+            #width: 300
+            #height: 35
+
